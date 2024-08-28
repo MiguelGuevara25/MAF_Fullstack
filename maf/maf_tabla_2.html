@@ -1,0 +1,261 @@
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de la solicitud de cotización</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        tbody tr:nth-child(odd) {
+            background-color: #f3f3f3;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="p-5">
+        <div class="text-white flex justify-between mb-5">
+            <div class="flex gap-3">
+                <button class="bg-fuchsia-900 px-4 py-2 rounded flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="20"
+                        height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                        <path d="M3 7l9 6l9 -6" />
+                    </svg>
+
+                    <span>Enviar al cliente</span>
+                </button>
+
+                <button class="bg-fuchsia-900 px-4 py-2 rounded flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="20"
+                        height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                        <path d="M7 11l5 5l5 -5" />
+                        <path d="M12 4l0 12" />
+                    </svg>
+
+                    <span>Descargar</span>
+                </button>
+            </div>
+
+            <button class="bg-fuchsia-900 px-4 py-2 rounded flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-floppy" width="20"
+                    height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2" />
+                    <path d="M12 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                    <path d="M14 4l0 4l-6 0l0 -4" />
+                </svg>
+
+                <span>Guardar Cotización</span>
+            </button>
+        </div>
+
+        <table class="border-collapse w-full table-auto">
+            <thead class="[&>tr>th]:border">
+                <tr class="*:p-5">
+                    <th class="w-1/6"></th>
+                    <th class="w-1/5">
+                        <img class="mx-auto"
+                            src="https://revistamagazzine.com/wp-content/uploads/2020/06/Logo-Qu%C3%A1litas.png" alt=""
+                            width="200">
+                    </th>
+                    <th class="w-1/5">
+                        <img class="mx-auto" src="https://upload.wikimedia.org/wikipedia/commons/f/fd/LOGO-MAPFRE.jpg"
+                            alt="" width="200">
+                    </th>
+                    <th class="w-1/5">
+                        <img class="mx-auto"
+                            src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Nuevo_logo_de_Rimac_Seguros.PNG"
+                            alt="" width="200">
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody class="text-center [&>tr>td]:border [&>tr>td]:p-3">
+                <tr
+                    class="[&>td>button]:bg-fuchsia-900 [&>td>button]:text-white [&>td>button]:font-bold [&>td>button]:uppercase [&>td>button]:rounded [&>td>button]:px-4 [&>td>button]:py-2">
+                    <td></td>
+                    <td>
+                        <button class="inline-flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link"
+                                width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                                <path d="M11 13l9 -9" />
+                                <path d="M15 4h5v5" />
+                            </svg>
+                            <span>Contratar</span>
+                        </button>
+                    </td>
+
+                    <td>
+                        <button class="inline-flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link"
+                                width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                                <path d="M11 13l9 -9" />
+                                <path d="M15 4h5v5" />
+                            </svg>
+                            <span>Contratar</span>
+                        </button>
+                    </td>
+
+                    <td>
+                        <button class="inline-flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link"
+                                width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                                <path d="M11 13l9 -9" />
+                                <path d="M15 4h5v5" />
+                            </svg>
+                            <span>Contratar</span>
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Moneda/Suma Asegurada</td>
+                    <td>US$ 50,610.00</td>
+                    <td>US$ 50,610.00</td>
+                    <td>US$ 50,610.00</td>
+                </tr>
+
+                <tr>
+                    <td>Enviar</td>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+
+                    <td>
+                        <input type="checkbox">
+                    </td>
+
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Tasa Neta</td>
+                    <td>3.10</td>
+                    <td>3.32</td>
+                    <td>3.40</td>
+                </tr>
+
+                <tr class="[&>td>span]:font-bold">
+                    <td>Prima Bruta</td>
+                    <td>
+                        <span class="flex justify-center gap-2 items-center">
+                            <span>US$ 1,908.57</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world"
+                                width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#00abfb" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                                <path d="M3.6 9h16.8" />
+                                <path d="M3.6 15h16.8" />
+                                <path d="M11.5 3a17 17 0 0 0 0 18" />
+                                <path d="M12.5 3a17 17 0 0 1 0 18" />
+                            </svg>
+                        </span>
+
+                        <ul>
+                            <li>12 Cuotas mensuales sin interes, Débito Automático de US$ 159.05</li>
+                            <li>6 Cuotas mensuales sin interés de US$ 318.1</li>
+                        </ul>
+                    </td>
+
+                    <td>
+                        <span class="flex justify-center gap-2 items-center">
+                            <span>US$ 2,042.18</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world"
+                                width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#00abfb" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                                <path d="M3.6 9h16.8" />
+                                <path d="M3.6 15h16.8" />
+                                <path d="M11.5 3a17 17 0 0 0 0 18" />
+                                <path d="M12.5 3a17 17 0 0 1 0 18" />
+                            </svg>
+                        </span>
+                        <ul>
+                            <li>4 Cuotas mensuales sin intereses de US$ 510.55</li>
+                            <li>4 Cuotas mensuales sin intereses de US$ 510.55</li>
+                            <li>10 Cuotas mensuales sin intereses de US$ 238.04</li>
+                            <li>12 Cuotas mensuales sin intereses, Débito Automático de US$ 170.18</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <span class="flex justify-center gap-2 items-center">
+                            <span> US$ 2,091.39</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world"
+                                width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#00abfb" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                                <path d="M3.6 9h16.8" />
+                                <path d="M3.6 15h16.8" />
+                                <path d="M11.5 3a17 17 0 0 0 0 18" />
+                                <path d="M12.5 3a17 17 0 0 1 0 18" />
+                            </svg>
+                        </span>
+
+                        <ul>
+                            <li>12 Cuotas mensuales sin interes, Débito Automático de US$ 174.28 (Persona Natural)</li>
+                            <li>12 Cuotas mensuales sin interés de US$ 174.28 (Persona jurídica)</li>
+                            <li>6 Cuotas mensuales sin interes de US$ 348.57 (Persona Natural)</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Zona de circulación</td>
+                    <td>Lima</td>
+                    <td>Lima</td>
+                    <td>Lima</td>
+                </tr>
+
+                <tr>
+                    <td>Desct. Contra Comisión</td>
+                    <td>No Aplica</td>
+                    <td>No Aplica</td>
+                    <td>No Aplica</td>
+                </tr>
+
+                <tr>
+                    <td>Vigencia</td>
+                    <td>Anual</td>
+                    <td>Plurianual 1 año(s)</td>
+                    <td>Anual</td>
+                </tr>
+
+                <tr>
+                    <td>Requiere GPS</td>
+                    <td>Si</td>
+                    <td>Si</td>
+                    <td>Si</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+
+</html>
+
+<?php

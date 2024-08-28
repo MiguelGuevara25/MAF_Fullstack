@@ -1,0 +1,54 @@
+?>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Buscar Cotización</title>
+</head>
+
+<body>
+    <main class="w-[90%] mx-auto">
+        <section>
+            <form id="formDatosClientes">
+                <div
+                    class="flex flex-wrap items-end gap-5 my-5 [&>div]:basis-64 [&>div]:flex [&>div]:flex-col [&>div]:gap-1.5 [&>div>input]:border [&>div>input]:border-gray-400 [&>div>input]:rounded [&>div>input]:px-2 [&>div>input]:py-0.5 [&>div>select]:px-2 [&>div>select]:py-0.5 [&>div>select]:border [&>div>select]:border-gray-400 [&>div>select]:rounded">
+                    <div>
+                        <label for="documentoCliente">Documento Cliente:</label>
+                        <input type="number" name="documentoCliente" id="documentoCliente" required />
+                    </div>
+
+                    <button type="submit" class="px-10 bg-gray-500 text-white py-1 rounded">Buscar</button>
+
+                    <div>
+                        <label for="cliente">Cliente:</label>
+                        <input class="bg-gray-300" name="cliente" id="cliente" readonly />
+                    </div>
+                </div>
+            </form>
+
+            <table class="w-[65%] *:border" id="infoCliente">
+            </table>
+
+            <form>
+                <div
+                    class="flex flex-wrap items-end gap-5 my-5 [&>div]:basis-64 [&>div]:flex [&>div]:flex-col [&>div]:gap-1.5 [&>div>input]:border [&>div>input]:border-gray-400 [&>div>input]:rounded [&>div>input]:px-2 [&>div>input]:py-0.5 [&>div>select]:px-2 [&>div>select]:py-0.5 [&>div>select]:border [&>div>select]:border-gray-400 [&>div>select]:rounded">
+                    <div>
+                        <label for="productos">Producto:</label>
+                        <select name="productos" id="productos">
+                            <option value="" hidden>Seleccione...</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="maf_buscar.js"></script>
+</body>
+
+</html>
+<?php

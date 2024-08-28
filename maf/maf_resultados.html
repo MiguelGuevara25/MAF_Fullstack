@@ -1,0 +1,255 @@
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de cotización</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main class="m-5 p-5 border border-purple-500">
+        <form id="formulario1"
+            class="flex gap-10 pb-5 border-b [&>div>input]:border [&>div>select]:border [&>div>select]:border [&>div>input]:px-4 [&>div>input]:py-1.5 [&>div>input]:rounded [&>div>select]:px-4 [&>div>select]:py-1.5 [&>div>select]:rounded [&>div>input]:w-80 [&>div>select]:w-80 [&>div]:gap-2 [&>div>label]:font-semibold">
+        </form>
+
+        <form id="formulario2"
+            class="flex flex-wrap gap-x-10 gap-y-5 pb-5 border-b [&>div>input]:border [&>div>select]:border [&>div>select]:border [&>div>input]:px-4 [&>div>input]:py-1.5 [&>div>input]:rounded [&>div>select]:px-4 [&>div>select]:py-1.5 [&>div>select]:rounded [&>div>input]:w-80 [&>div>select]:w-80 [&>div]:gap-2 [&>div>label]:font-semibold">
+        </form>
+
+        <div class="flex justify-end mt-5">
+            <button class="bg-fuchsia-900 px-4 py-2 rounded flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-floppy" width="20"
+                    height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2" />
+                    <path d="M12 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                    <path d="M14 4l0 4l-6 0l0 -4" />
+                </svg>
+
+                <span class="text-white font-semibold">COTIZAR</span>
+            </button>
+        </div>
+    </main>
+
+    <script>
+        const datosFormulario1 = [
+            {
+                id: 'nroCotizacion',
+                nameLabel: 'Nro. de Cotización:',
+                input: true,
+                inputType: 'text',
+            },
+
+            {
+                id: 'fechaEmision',
+                nameLabel: 'Fecha de emisión:',
+                input: true,
+                inputType: 'date',
+            },
+
+            {
+                id: 'funcionario',
+                nameLabel: 'Funcionario:',
+                input: false,
+                inputType: 'select',
+                placeholder: "Seleccionar Funcionario"
+            },
+
+            {
+                id: 'agencia',
+                nameLabel: 'Agencia:',
+                input: false,
+                inputType: 'select',
+                placeholder: "Seleccionar Agencia"
+            }
+        ]
+
+        const datosFormulario2 = [
+            {
+                id: 'placa',
+                nameLabel: 'Placa:',
+                input: true,
+                inputType: 'text',
+            },
+
+            {
+                id: 'marca',
+                nameLabel: 'Marca:',
+                input: false,
+                inputType: 'select',
+                placeholder: "Seleccionar Marca"
+            },
+
+            {
+                id: 'modelo',
+                nameLabel: 'Modelo:',
+                input: false,
+                inputType: 'select',
+                placeholder: "Seleccionar Modelo"
+            },
+
+            {
+                id: 'clase',
+                nameLabel: 'Clase:',
+                input: false,
+                inputType: 'select',
+                placeholder: "Seleccionar Clase"
+            },
+
+            {
+                id: 'tipo',
+                nameLabel: 'Tipo:',
+                input: false,
+                inputType: 'select',
+                placeholder: "Seleccionar Tipo"
+            },
+
+            {
+                id: 'uso',
+                nameLabel: 'Uso:',
+                input: false,
+                inputType: 'select',
+                placeholder: "Seleccionar Uso"
+            },
+
+            {
+                id: 'lugarCirculacion',
+                nameLabel: 'Lugar de Circulación:',
+                input: false,
+                inputType: 'select',
+                placeholder: "Seleccionar Ubicación"
+            },
+
+            {
+                id: 'anio',
+                nameLabel: 'Año:',
+                input: true,
+                inputType: 'date',
+            },
+
+            {
+                id: "sumaAsegurada",
+                nameLabel: "Suma Asegurada:",
+                input: true,
+                inputType: "number",
+            },
+
+            {
+                id: "ceroKm",
+                nameLabel: "CERO KILÓMETROS",
+                input: true,
+                inputType: "checkbox",
+            },
+
+            {
+                id: "anioVigencia",
+                nameLabel: "Año de Vigencia:",
+                input: true,
+                inputType: "number",
+            },
+
+            {
+                id: "pluriAnual",
+                nameLabel: "Plurianual",
+                input: true,
+                inputType: "checkbox",
+            },
+
+            {
+                id: "combustible",
+                nameLabel: "Combustible:",
+                input: false,
+                inputType: "select",
+                placeholder: "Seleccionar Combustible"
+            }
+        ]
+
+        const formulario1 = document.querySelector('#formulario1');
+        const formulario2 = document.querySelector('#formulario2');
+
+        datosFormulario1.forEach((dato) => {
+            const div = document.createElement('div');
+            div.classList.add('flex', 'flex-col');
+
+            const label = document.createElement('label');
+            label.setAttribute('for', dato.id);
+            label.textContent = dato.nameLabel;
+
+            if (dato.input === false) {
+                const select = document.createElement('select');
+                select.setAttribute('id', dato.id);
+                select.setAttribute('name', dato.id);
+
+                const option = document.createElement('option');
+                option.setAttribute('value', '1');
+                option.textContent = dato.placeholder;
+
+                select.appendChild(option);
+                div.appendChild(label);
+                div.appendChild(select);
+                formulario1.appendChild(div);
+                return;
+            }
+
+            const input = document.createElement('input');
+            input.setAttribute('id', dato.id);
+            input.setAttribute('name', dato.id);
+            input.setAttribute('type', dato.inputType);
+
+            div.appendChild(label);
+            div.appendChild(input);
+
+            formulario1.appendChild(div);
+        });
+
+        datosFormulario2.forEach((dato) => {
+            const div = document.createElement('div');
+            if (dato.inputType === 'checkbox') {
+                div.classList.add('flex', 'items-center');
+            } else {
+                div.classList.add('flex', 'flex-col');
+            }
+
+            const label = document.createElement('label');
+            label.setAttribute('for', dato.id);
+            label.textContent = dato.nameLabel;
+
+            if (dato.input === false) {
+                const select = document.createElement('select');
+                select.setAttribute('id', dato.id);
+                select.setAttribute('name', dato.id);
+
+                const option = document.createElement('option');
+                option.setAttribute('value', '1');
+                option.textContent = dato.placeholder;
+
+                select.appendChild(option);
+                div.appendChild(label);
+                div.appendChild(select);
+                formulario2.appendChild(div);
+                return;
+            }
+
+            const input = document.createElement('input');
+            input.style.width = 'max-content';
+
+            input.setAttribute('id', dato.id);
+            input.setAttribute('name', dato.id);
+            input.setAttribute('type', dato.inputType);
+
+            div.appendChild(label);
+            div.appendChild(input);
+
+            formulario2.appendChild(div);
+        });
+    </script>
+</body>
+
+</html>
+
+<?php

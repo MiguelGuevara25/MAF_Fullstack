@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Venta de cotización seleccionada</title>
+</head>
+
+<body>
+    <main class="w-[90%] mx-auto">
+        <section>
+            <div
+                class="grid grid-cols-3 gap-5 [&>div]:flex [&>div]:flex-col [&>div]:gap-1.5 [&>div>input]:border [&>div>input]:border-gray-400 [&>div>input]:rounded [&>div>input]:px-2 [&>div>input]:py-0.5 [&>div>select]:px-2 [&>div>select]:py-0.5 [&>div>select]:border [&>div>select]:border-gray-400 [&>div>select]:rounded">
+                <div>
+                    <label for="placa">Placa:</label>
+                    <input name="placa" id="placa" />
+                </div>
+
+                <div>
+                    <label for="marca">Marca:</label>
+                    <input name="marca" id="marca" />
+                </div>
+
+                <div>
+                    <label for="modelo">Modelo:</label>
+                    <input name="modelo" id="modelo" />
+                </div>
+
+                <div>
+                    <label for="clase">Clase:</label>
+                    <input name="clase" id="clase" />
+                </div>
+
+                <div>
+                    <label for="tipo">Tipo:</label>
+                    <input name="tipo" id="tipo" />
+                </div>
+
+                <div>
+                    <label for="uso">Uso:</label>
+                    <input name="uso" id="uso" />
+                </div>
+
+                <div>
+                    <label for="motor">Motor:</label>
+                    <input name="motor" id="motor" />
+                </div>
+
+                <div>
+                    <label for="chasis">Chasis:</label>
+                    <input name="chasis" id="chasis" />
+                </div>
+
+                <div>
+                    <label for="anio">Año:</label>
+                    <input name="anio" id="anio" />
+                </div>
+
+                <div>
+                    <label for="ocupantes">Ocupantes:</label>
+                    <input name="ocupantes" id="ocupantes" />
+                </div>
+
+                <div>
+                    <label for="asientos">Asientos:</label>
+                    <input name="asientos" id="asientos" />
+                </div>
+
+                <div>
+                    <label for="color">Color:</label>
+                    <select name="color" id="color"></select>
+                </div>
+
+                <div>
+                    <label for="combustible">Combustible:</label>
+                    <input name="combustible" id="combustible" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="maf_ventaSeleccionada.js"></script>
+</body>
+
+</html>
