@@ -462,7 +462,29 @@ export const obtenerZonaGeo = async (req, res) => {
   }
 };
 
-// export const obtener
+//! --- Proceso 523 ---
+export const obtenerPlanesFinanciamiento = async (req, res) => {
+  try {
+    const url =
+      "http://qa.sigsretail.com/ApiServiciosRetail_GR/api/ProcesarPeticion";
+    const { data } = await axios.post(
+      url,
+      {
+        TipoProceso: "523",
+        Parametros: '{"PROD_Interno":17}',
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${returnToken}`,
+        },
+      }
+    );
+    res.send(data);
+  } catch (error) {
+    res.send({ error: error.message });
+  }
+};
 
 //? --- Lista de procesos sin respuesta ---
 // 522 - Tipo de Estado Civil

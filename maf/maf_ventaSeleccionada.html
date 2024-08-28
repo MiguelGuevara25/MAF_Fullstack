@@ -12,238 +12,284 @@
 <body>
     <main class="w-[90%] mx-auto">
         <section class="space-y-10">
-            <div
-                class="grid grid-cols-3 gap-5 text-center text-white [&>div]:bg-blue-500 [&>div]:py-10 [&>div]:rounded">
-                <div>
+            <div class="grid grid-cols-3 gap-5 text-center text-white [&>div]:py-10 [&>div]:rounded">
+                <div id="squareVeh" class="bg-blue-500">
                     <span>Vehículo</span>
                 </div>
 
-                <div>
+                <div id="squareAseCont" class="bg-gray-400">
                     <span>Asegurado y contratante</span>
                 </div>
 
-                <div>
+                <div id="squareDatos" class="bg-gray-400">
                     <span>Datos adicionales</span>
                 </div>
             </div>
 
-            <div
-                class="grid grid-cols-3 gap-5 [&>div]:flex [&>div]:flex-col [&>div]:gap-1.5 [&>div>input]:border [&>div>input]:border-gray-400 [&>div>input]:rounded [&>div>input]:px-2 [&>div>input]:py-0.5 [&>div>select]:px-2 [&>div>select]:py-0.5 [&>div>select]:border [&>div>select]:border-gray-400 [&>div>select]:rounded">
-                <section class="col-span-3 w-max flex gap-2">
-                    <input type="checkbox" name="placaTramite" id="placaTramite">
-                    <label for="placaTramite">Placa en trámite</label>
-                </section>
-
-                <div>
-                    <label for="placa">Placa:</label>
-                    <input name="placa" id="placa" />
-                </div>
-
-                <div>
-                    <label for="marca">Marca:</label>
-                    <input name="marca" id="marca" />
-                </div>
-
-                <div>
-                    <label for="modelo">Modelo:</label>
-                    <input name="modelo" id="modelo" />
-                </div>
-
-                <div>
-                    <label for="clase">Clase:</label>
-                    <input name="clase" id="clase" />
-                </div>
-
-                <div>
-                    <label for="tipo">Tipo:</label>
-                    <input name="tipo" id="tipo" />
-                </div>
-
-                <div>
-                    <label for="uso">Uso:</label>
-                    <input name="uso" id="uso" />
-                </div>
-
-                <div>
-                    <label for="motor">Motor:</label>
-                    <input name="motor" id="motor" />
-                </div>
-
-                <div>
-                    <label for="chasis">Chasis:</label>
-                    <input name="chasis" id="chasis" />
-                </div>
-
-                <div>
-                    <label for="anio">Año:</label>
-                    <input name="anio" id="anio" />
-                </div>
-
-                <div>
-                    <label for="ocupantes">Ocupantes:</label>
-                    <input name="ocupantes" id="ocupantes" />
-                </div>
-
-                <div>
-                    <label for="asientos">Asientos:</label>
-                    <input name="asientos" id="asientos" />
-                </div>
-
-                <div>
-                    <label for="color">Color:</label>
-                    <select name="color" id="color"></select>
-                </div>
-
-                <div>
-                    <label for="combustible">Combustible:</label>
-                    <input name="combustible" id="combustible" />
-                </div>
-
-                <div class="col-span-3">
-                    <button class="px-10 bg-gray-500 text-white py-1 rounded w-max self-end">Siguiente</button>
-                </div>
-            </div>
-
-            <div>
-                <h2 class="font-bold uppercase text-xl">Asegurado</h2>
+            <div id="vehiculoForm">
                 <div
                     class="grid grid-cols-3 gap-5 [&>div]:flex [&>div]:flex-col [&>div]:gap-1.5 [&>div>input]:border [&>div>input]:border-gray-400 [&>div>input]:rounded [&>div>input]:px-2 [&>div>input]:py-0.5 [&>div>select]:px-2 [&>div>select]:py-0.5 [&>div>select]:border [&>div>select]:border-gray-400 [&>div>select]:rounded">
-                    <div>
-                        <label for="tipoDocumentoAsegurado">Tipo de Documentos:</label>
-                        <select name="tipoDocumentoAsegurado" id="tipoDocumentoAsegurado" required></select>
-                    </div>
-
-                    <div>
-                        <label for="nroDocumentoAsegurado">Número de Documento:</label>
-                        <input name="nroDocumentoAsegurado" id="nroDocumentoAsegurado" />
-                    </div>
-
-                    <div>
-                        <label for="fechaNacimientoAsegurado">Fecha de Nacimiento:</label>
-                        <input type="date" name="fechaNacimientoAsegurado" id="fechaNacimientoAsegurado" />
-                    </div>
-
-                    <div>
-                        <label for="apellidoPaternoAsegurado">Apellido Paterno:</label>
-                        <input name="apellidoPaternoAsegurado" id="apellidoPaternoAsegurado" />
-                    </div>
-
-                    <div>
-                        <label for="apellidoMaternoAsegurado">Apellido Materno:</label>
-                        <input name="apellidoMaternoAsegurado" id="apellidoMaternoAsegurado" />
-                    </div>
-
-                    <div>
-                        <label for="nombresAsegurado">Nombres:</label>
-                        <input name="nombresAsegurado" id="nombresAsegurado" />
-                    </div>
-
-                    <div>
-                        <label for="estadoCivilAsegurado">Estado Civil:</label>
-                        <select name="estadoCivilAsegurado" id="estadoCivilAsegurado"></select>
-                    </div>
-
-                    <div>
-                        <label for="sexoAsegurado">Sexo:</label>
-                        <select name="sexoAsegurado" id="sexoAsegurado"></select>
-                    </div>
-
-                    <div>
-                        <label for="emailAsegurado">Email:</label>
-                        <input type="email" name="emailAsegurado" id="emailAsegurado">
-                    </div>
-
-                    <div>
-                        <label for="telefonoAsegurado">Telefono 1:</label>
-                        <input name="telefonoAsegurado" id="telefonoAsegurado">
-                    </div>
-
-                    <div class="col-span-2">
-                        <label for="direccionAsegurado">Direccion:</label>
-                        <input name="direccionAsegurado" id="direccionAsegurado">
-                    </div>
-
-                    <div>
-                        <label for="ubigeoAsegurado">Ubigeo:</label>
-                        <select name="ubigeoAsegurado" id="ubigeoAsegurado"></select>
-                    </div>
-
-                    <section class="col-span-2 w-max flex items-center self-center gap-2">
-                        <input type="checkbox" name="contratanteAsegurado" id="contratanteAsegurado">
-                        <label for="contratanteAsegurado">El contrantante es también el asegurado</label>
+                    <section class="col-span-3 w-max flex gap-2">
+                        <input type="checkbox" name="placaTramite" id="placaTramite">
+                        <label for="placaTramite">Placa en trámite</label>
                     </section>
+
+                    <div>
+                        <label for="placa">Placa:</label>
+                        <input name="placa" id="placa" />
+                    </div>
+
+                    <div>
+                        <label for="marca">Marca:</label>
+                        <input name="marca" id="marca" />
+                    </div>
+
+                    <div>
+                        <label for="modelo">Modelo:</label>
+                        <input name="modelo" id="modelo" />
+                    </div>
+
+                    <div>
+                        <label for="clase">Clase:</label>
+                        <input name="clase" id="clase" />
+                    </div>
+
+                    <div>
+                        <label for="tipo">Tipo:</label>
+                        <input name="tipo" id="tipo" />
+                    </div>
+
+                    <div>
+                        <label for="uso">Uso:</label>
+                        <input name="uso" id="uso" />
+                    </div>
+
+                    <div>
+                        <label for="motor">Motor:</label>
+                        <input name="motor" id="motor" />
+                    </div>
+
+                    <div>
+                        <label for="chasis">Chasis:</label>
+                        <input name="chasis" id="chasis" />
+                    </div>
+
+                    <div>
+                        <label for="anio">Año:</label>
+                        <input name="anio" id="anio" />
+                    </div>
+
+                    <div>
+                        <label for="ocupantes">Ocupantes:</label>
+                        <input name="ocupantes" id="ocupantes" />
+                    </div>
+
+                    <div>
+                        <label for="asientos">Asientos:</label>
+                        <input name="asientos" id="asientos" />
+                    </div>
+
+                    <div>
+                        <label for="color">Color:</label>
+                        <select name="color" id="color"></select>
+                    </div>
+
+                    <div>
+                        <label for="combustible">Combustible:</label>
+                        <input name="combustible" id="combustible" />
+                    </div>
+
+                    <div class="col-span-3">
+                        <button id="sgteVehiculo"
+                            class="px-10 bg-gray-500 text-white py-1 rounded w-max self-end">Siguiente</button>
+                    </div>
                 </div>
             </div>
 
-            <div>
-                <h2 class="font-bold uppercase text-xl">Contratante</h2>
+            <div id="aseguradoForm" class="hidden space-y-10">
+                <div>
+                    <h2 class="font-bold uppercase text-xl">Asegurado</h2>
+                    <div
+                        class="grid grid-cols-3 gap-5 [&>div]:flex [&>div]:flex-col [&>div]:gap-1.5 [&>div>input]:border [&>div>input]:border-gray-400 [&>div>input]:rounded [&>div>input]:px-2 [&>div>input]:py-0.5 [&>div>select]:px-2 [&>div>select]:py-0.5 [&>div>select]:border [&>div>select]:border-gray-400 [&>div>select]:rounded">
+                        <div>
+                            <label for="tipoDocumentoAsegurado">Tipo de Documentos:</label>
+                            <select name="tipoDocumentoAsegurado" id="tipoDocumentoAsegurado" required></select>
+                        </div>
+
+                        <div>
+                            <label for="nroDocumentoAsegurado">Número de Documento:</label>
+                            <input name="nroDocumentoAsegurado" id="nroDocumentoAsegurado" />
+                        </div>
+
+                        <div>
+                            <label for="fechaNacimientoAsegurado">Fecha de Nacimiento:</label>
+                            <input type="date" name="fechaNacimientoAsegurado" id="fechaNacimientoAsegurado" />
+                        </div>
+
+                        <div>
+                            <label for="apellidoPaternoAsegurado">Apellido Paterno:</label>
+                            <input name="apellidoPaternoAsegurado" id="apellidoPaternoAsegurado" />
+                        </div>
+
+                        <div>
+                            <label for="apellidoMaternoAsegurado">Apellido Materno:</label>
+                            <input name="apellidoMaternoAsegurado" id="apellidoMaternoAsegurado" />
+                        </div>
+
+                        <div>
+                            <label for="nombresAsegurado">Nombres:</label>
+                            <input name="nombresAsegurado" id="nombresAsegurado" />
+                        </div>
+
+                        <div>
+                            <label for="estadoCivilAsegurado">Estado Civil:</label>
+                            <select name="estadoCivilAsegurado" id="estadoCivilAsegurado"></select>
+                        </div>
+
+                        <div>
+                            <label for="sexoAsegurado">Sexo:</label>
+                            <select name="sexoAsegurado" id="sexoAsegurado"></select>
+                        </div>
+
+                        <div>
+                            <label for="emailAsegurado">Email:</label>
+                            <input type="email" name="emailAsegurado" id="emailAsegurado">
+                        </div>
+
+                        <div>
+                            <label for="telefonoAsegurado">Telefono 1:</label>
+                            <input name="telefonoAsegurado" id="telefonoAsegurado">
+                        </div>
+
+                        <div class="col-span-2">
+                            <label for="direccionAsegurado">Direccion:</label>
+                            <input name="direccionAsegurado" id="direccionAsegurado">
+                        </div>
+
+                        <div>
+                            <label for="ubigeoAsegurado">Ubigeo:</label>
+                            <select name="ubigeoAsegurado" id="ubigeoAsegurado"></select>
+                        </div>
+
+                        <section class="col-span-2 w-max flex items-center self-center gap-2">
+                            <input type="checkbox" name="contratanteAsegurado" id="contratanteAsegurado">
+                            <label for="contratanteAsegurado">El contrantante es también el asegurado</label>
+                        </section>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="font-bold uppercase text-xl">Contratante</h2>
+                    <div
+                        class="grid grid-cols-3 gap-5 [&>div]:flex [&>div]:flex-col [&>div]:gap-1.5 [&>div>input]:border [&>div>input]:border-gray-400 [&>div>input]:rounded [&>div>input]:px-2 [&>div>input]:py-0.5 [&>div>select]:px-2 [&>div>select]:py-0.5 [&>div>select]:border [&>div>select]:border-gray-400 [&>div>select]:rounded">
+                        <div>
+                            <label for="tipoDocumentoContratante">Tipo de Documentos:</label>
+                            <select name="tipoDocumentoContratante" id="tipoDocumentoContratante"></select>
+                        </div>
+
+                        <div>
+                            <label for="nroDocumentoContratante">Número de Documento:</label>
+                            <input name="nroDocumentoContratante" id="nroDocumentoContratante" />
+                        </div>
+
+                        <div>
+                            <label for="fechaNacimientoContratante">Fecha de Nacimiento:</label>
+                            <input type="date" name="fechaNacimientoContratante" id="fechaNacimientoContratante" />
+                        </div>
+
+                        <div>
+                            <label for="apellidoPaternoContratante">Apellido Paterno:</label>
+                            <input name="apellidoPaternoContratante" id="apellidoPaternoContratante" />
+                        </div>
+
+                        <div>
+                            <label for="apellidoMaternoContratante">Apellido Materno:</label>
+                            <input name="apellidoMaternoContratante" id="apellidoMaternoContratante" />
+                        </div>
+
+                        <div>
+                            <label for="nombresContratante">Nombres:</label>
+                            <input name="nombresContratante" id="nombresContratante" />
+                        </div>
+
+                        <div>
+                            <label for="estadoCivilContratante">Estado Civil:</label>
+                            <select name="estadoCivilContratante" id="estadoCivilContratante"></select>
+                        </div>
+
+                        <div>
+                            <label for="sexoContratante">Sexo:</label>
+                            <select name="sexoContratante" id="sexoContratante"></select>
+                        </div>
+
+                        <div>
+                            <label for="emailContratante">Email:</label>
+                            <input name="emailContratante" id="emailContratante">
+                        </div>
+
+                        <div>
+                            <label for="telefonoContratante">Telefono 1:</label>
+                            <input name="telefonoContratante" id="telefonoContratante">
+                        </div>
+
+                        <div class="col-span-2">
+                            <label for="direccionContratante">Direccion:</label>
+                            <input name="direccionContratante" id="direccionContratante">
+                        </div>
+
+                        <div>
+                            <label for="ubigeoContratante">Ubigeo:</label>
+                            <select name="ubigeoContratante" id="ubigeoContratante"></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between">
+                    <button id="atrasAsegurado" class="px-10 bg-gray-500 text-white py-1 rounded w-max">Atrás</button>
+                    <button id="sgteAsegurado"
+                        class="px-10 bg-gray-500 text-white py-1 rounded w-max">Siguiente</button>
+                </div>
+            </div>
+
+            <div id="datosAdicionalesForm" class="hidden space-y-10">
                 <div
-                    class="grid grid-cols-3 gap-5 [&>div]:flex [&>div]:flex-col [&>div]:gap-1.5 [&>div>input]:border [&>div>input]:border-gray-400 [&>div>input]:rounded [&>div>input]:px-2 [&>div>input]:py-0.5 [&>div>select]:px-2 [&>div>select]:py-0.5 [&>div>select]:border [&>div>select]:border-gray-400 [&>div>select]:rounded">
+                    class="grid grid-cols-3 gap-5 [&>div]:flex [&>div]:flex-col [&>div]:gap-1.5 [&>div>input]:border [&>div>input]:border-gray-400 [&>div>input]:rounded [&>div>input]:px-2 [&>div>input]:py-0.5 [&>div>select]:px-2 [&>div>select]:py-0.5 [&>div>select]:border [&>div>select]:border-gray-400 [&>div>select]:rounded [&>div>textarea]:px-2 [&>div>textarea]:py-0.5 [&>div>textarea]:border [&>div>textarea]:border-gray-400 [&>div>textarea]:rounded">
                     <div>
-                        <label for="tipoDocumentoContratante">Tipo de Documentos:</label>
-                        <select name="tipoDocumentoContratante" id="tipoDocumentoContratante"></select>
+                        <label for="formaPago">Forma de pago:</label>
+                        <select name="formaPago" id="formaPago"></select>
                     </div>
 
                     <div>
-                        <label for="nroDocumentoContratante">Número de Documento:</label>
-                        <input name="nroDocumentoContratante" id="nroDocumentoContratante" />
+                        <label for="nroCuotas">Número de Cuotas:</label>
+                        <select name="nroCuotas" id="nroCuotas"></select>
                     </div>
 
                     <div>
-                        <label for="fechaNacimientoContratante">Fecha de Nacimiento:</label>
-                        <input type="date" name="fechaNacimientoContratante" id="fechaNacimientoContratante" />
+                        <label for="endosatario">Endosatario:</label>
+                        <select name="endosatario" id="endosatario"></select>
                     </div>
 
                     <div>
-                        <label for="apellidoPaternoContratante">Apellido Paterno:</label>
-                        <input name="apellidoPaternoContratante" id="apellidoPaternoContratante" />
+                        <label for="fechaInicioVigencia">Fecha de Inicio de Vigencia:</label>
+                        <input type="date" name="fechaInicioVigencia" id="fechaInicioVigencia" />
                     </div>
 
                     <div>
-                        <label for="apellidoMaternoContratante">Apellido Materno:</label>
-                        <input name="apellidoMaternoContratante" id="apellidoMaternoContratante" />
+                        <label for="fechaFinVigencia">Fecha de Fin de Vigencia:</label>
+                        <input type="date" name="fechaFinVigencia" id="fechaFinVigencia" />
                     </div>
 
-                    <div>
-                        <label for="nombresContratante">Nombres:</label>
-                        <input name="nombresContratante" id="nombresContratante" />
-                    </div>
-
-                    <div>
-                        <label for="estadoCivilContratante">Estado Civil:</label>
-                        <input name="estadoCivilContratante" id="estadoCivilContratante">
-                    </div>
-
-                    <div>
-                        <label for="sexoContratante">Sexo:</label>
-                        <input name="sexoContratante" id="sexoContratante">
-                    </div>
-
-                    <div>
-                        <label for="emailContratante">Email:</label>
-                        <input name="emailContratante" id="emailContratante">
-                    </div>
-
-                    <div>
-                        <label for="telefonoContratante">Telefono 1:</label>
-                        <input name="telefonoContratante" id="telefonoContratante">
-                    </div>
-
-                    <div class="col-span-2">
-                        <label for="direccionContratante">Direccion:</label>
-                        <input name="direccionContratante" id="direccionContratante">
-                    </div>
-
-                    <div>
-                        <label for="ubigeoContratante">Ubigeo:</label>
-                        <input name="ubigeoContratante" id="ubigeoContratante">
+                    <div class="col-span-3">
+                        <label for="observaciones">Observaciones:</label>
+                        <textarea name="observaciones" id="observaciones"></textarea>
                     </div>
                 </div>
-            </div>
 
-            <div class="flex justify-between">
-                <button class="px-10 bg-gray-500 text-white py-1 rounded w-max">Atrás</button>
-                <button class="px-10 bg-gray-500 text-white py-1 rounded w-max">Siguiente</button>
+                <div class="flex justify-between">
+                    <button id="atrasDatosAdicionales"
+                        class="px-10 bg-gray-500 text-white py-1 rounded w-max">Atrás</button>
+                    <button id="btnContratar" class="px-10 bg-gray-500 text-white py-1 rounded w-max">Contratar</button>
+                </div>
             </div>
         </section>
     </main>
