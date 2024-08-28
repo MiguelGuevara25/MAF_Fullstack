@@ -412,6 +412,30 @@ export const obtenerSumaAsegurada = async (req, res) => {
 //! --- Proceso 512 ---
 // export const
 
+//! --- Proceso 513 ---
+export const obtenerDatosClienteAsegurado = async (req, res) => {
+  try {
+    const url =
+      "http://qa.sigsretail.com/ApiServiciosRetail_GR/api/ProcesarPeticion";
+    const { data } = await axios.post(
+      url,
+      {
+        TipoProceso: "513",
+        Parametros: '{"ENTC_ruc":"40875215","TIPO_CodTDI":"001"}',
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${returnToken}`,
+        },
+      }
+    );
+    res.send(data);
+  } catch (error) {
+    res.send({ error: error.message });
+  }
+};
+
 //! --- Proceso 521 ---
 export const obtenerZonaGeo = async (req, res) => {
   try {
@@ -439,3 +463,7 @@ export const obtenerZonaGeo = async (req, res) => {
 };
 
 // export const obtener
+
+//? --- Lista de procesos sin respuesta ---
+// 522 - Tipo de Estado Civil
+// 503 - Tipo de sexo (SEX)

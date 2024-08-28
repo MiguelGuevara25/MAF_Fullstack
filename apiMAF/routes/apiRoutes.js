@@ -16,6 +16,7 @@ import {
   obtenerSexo,
   obtenerZonaGeo,
   obtenerBCO,
+  obtenerDatosClienteAsegurado,
 } from "../controllers/apiController.js";
 
 const router = express.Router();
@@ -39,5 +40,7 @@ router.get("/lugar-circulacion", obtenerLugarCirculacion);
 router.get("/anios", obtenerAniosAntiguedad);
 router.get("/suma-asegurada", obtenerSumaAsegurada);
 router.get("/zona-geografica", obtenerZonaGeo);
+
+router.get("/datos-cliente-asegurado", obtenerDatosClienteAsegurado);
 
 export default router;
