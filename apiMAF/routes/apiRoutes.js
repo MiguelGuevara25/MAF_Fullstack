@@ -18,6 +18,7 @@ import {
   obtenerBCO,
   obtenerDatosClienteAsegurado,
   obtenerPlanesFinanciamiento,
+  obtenerCabeceraCotizacion,
 } from "../controllers/apiController.js";
 
 const router = express.Router();
@@ -43,7 +44,7 @@ router.get("/suma-asegurada", obtenerSumaAsegurada);
 router.get("/zona-geografica", obtenerZonaGeo);
 
 router.get("/datos-cliente-asegurado", obtenerDatosClienteAsegurado);
-
+router.get("/cabecera-cotizacion", obtenerCabeceraCotizacion);
 router.get("/planes-financiamiento", obtenerPlanesFinanciamiento);
 
 export default router;

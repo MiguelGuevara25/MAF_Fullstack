@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
     <title>Venta de cotización seleccionada</title>
 </head>
 
@@ -100,8 +101,10 @@
                     </div>
 
                     <div class="col-span-3">
-                        <button id="sgteVehiculo"
-                            class="px-10 bg-gray-500 text-white py-1 rounded w-max self-end">Siguiente</button>
+                        <button id="sgteVehiculo" class="px-10 bg-gray-500 text-white py-1 rounded w-max self-end">
+                            <span>Siguiente</span>
+                            <span class="mdi mdi-arrow-right"></span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -245,9 +248,15 @@
                 </div>
 
                 <div class="flex justify-between">
-                    <button id="atrasAsegurado" class="px-10 bg-gray-500 text-white py-1 rounded w-max">Atrás</button>
-                    <button id="sgteAsegurado"
-                        class="px-10 bg-gray-500 text-white py-1 rounded w-max">Siguiente</button>
+                    <button id="atrasAsegurado" class="px-10 bg-gray-500 text-white py-1 rounded w-max">
+                        <span class="mdi mdi-arrow-left"></span>
+                        <span>Atrás</span>
+                    </button>
+
+                    <button id="sgteAsegurado" class="px-10 bg-gray-500 text-white py-1 rounded w-max space-x-1">
+                        <span>Siguiente</span>
+                        <span class="mdi mdi-arrow-right"></span>
+                    </button>
                 </div>
             </div>
 
@@ -286,9 +295,14 @@
                 </div>
 
                 <div class="flex justify-between">
-                    <button id="atrasDatosAdicionales"
-                        class="px-10 bg-gray-500 text-white py-1 rounded w-max">Atrás</button>
-                    <button id="btnContratar" class="px-10 bg-gray-500 text-white py-1 rounded w-max">Contratar</button>
+                    <button id="atrasDatosAdicionales" class="px-10 bg-gray-500 text-white py-1 rounded w-max">
+                        <span class="mdi mdi-arrow-left"></span>
+                        <span>Atrás</span>
+                    </button>
+                    <button id="btnContratar" class="px-10 bg-gray-500 text-white py-1 rounded w-max space-x-1">
+                        <span>Contratar</span>
+                        <span class="mdi mdi-file-document"></span>
+                    </button>
                 </div>
             </div>
         </section>

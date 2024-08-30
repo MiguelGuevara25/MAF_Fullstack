@@ -410,7 +410,28 @@ export const obtenerSumaAsegurada = async (req, res) => {
 };
 
 //! --- Proceso 512 ---
-// export const
+export const obtenterDatosVehiculo = async (req, res) => {
+  try {
+    const url =
+      "http://qa.sigsretail.com/ApiServiciosRetail_GR/api/ProcesarPeticion";
+    const { data } = await axios.post(
+      url,
+      {
+        TipoProceso: "512",
+        Parametros: '{"VEHI_Placa":"abc123"}',
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${returnToken}`,
+        },
+      }
+    );
+    res.send(data);
+  } catch (error) {
+    res.send({ error: error.message });
+  }
+};
 
 //! --- Proceso 513 ---
 export const obtenerDatosClienteAsegurado = async (req, res) => {
@@ -422,6 +443,54 @@ export const obtenerDatosClienteAsegurado = async (req, res) => {
       {
         TipoProceso: "513",
         Parametros: '{"ENTC_ruc":"40875215","TIPO_CodTDI":"001"}',
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${returnToken}`,
+        },
+      }
+    );
+    res.send(data);
+  } catch (error) {
+    res.send({ error: error.message });
+  }
+};
+
+// //! --- Proceso 514 ---
+// export const obtenerDatosClienteAsegurado2 = async (req, res) => {
+//   try {
+//     const url =
+//       "http://qa.sigsretail.com/ApiServiciosRetail_GR/api/ProcesarPeticion";
+//     const { data } = await axios.post(
+//       url,
+//       {
+//         TipoProceso: "514",
+//         Parametros: '{"ENTC_ruc":"40875215","TIPO_CodTDI":"001"}',
+//       },
+//       {
+//         headers: {
+//           "Content-Type": "application/json",
+//           Authorization: `Bearer ${returnToken}`,
+//         },
+//       }
+//     );
+//     res.send(data);
+//   } catch (error) {
+//     res.send({ error: error.message });
+//   }
+// };
+
+//! --- Proceso 515 ---
+export const obtenerCabeceraCotizacion = async (req, res) => {
+  try {
+    const url =
+      "http://qa.sigsretail.com/ApiServiciosRetail_GR/api/ProcesarPeticion";
+    const { data } = await axios.post(
+      url,
+      {
+        TipoProceso: "515",
+        Parametros: '{"COTI_Interno":678039}',
       },
       {
         headers: {
@@ -489,3 +558,4 @@ export const obtenerPlanesFinanciamiento = async (req, res) => {
 //? --- Lista de procesos sin respuesta ---
 // 522 - Tipo de Estado Civil
 // 503 - Tipo de sexo (SEX)
+// 524

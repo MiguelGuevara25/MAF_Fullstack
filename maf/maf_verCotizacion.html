@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
     <title>Ver Cotización</title>
 </head>
 
@@ -24,7 +25,7 @@
 
                         <div class="basis-[61%]">
                             <label for="vehiculo">Vehículo:</label>
-                            <input class="w-3/5" type="text" id="vehiculo" name="vehiculo" readonly>
+                            <input class="w-3/5" id="vehiculo" name="vehiculo" readonly>
                         </div>
 
                         <div class="basis-80">
@@ -87,14 +88,22 @@
                         </div>
 
                         <button id="buscarCompania"
-                            class="px-10 bg-gray-500 text-white py-1 rounded self-end">Buscar</button>
+                            class="px-10 bg-gray-500 text-white py-1 rounded self-end space-x-1">
+                            <span class="mdi mdi-magnify"></span>
+                            <span>Buscar</span>
+                        </button>
                     </div>
 
-                    <button type="submit" class="px-10 bg-gray-500 text-white py-1 rounded">Contratar</button>
+                    <button type="submit" class="px-10 bg-gray-500 text-white py-1 rounded space-x-1">
+                        <span class="mdi mdi-calculator"></span>
+                        <span>Contratar</span>
+                    </button>
                 </div>
             </form>
         </section>
     </main>
+
+    <script src="maf_verCotizacion.js"></script>
 </body>
 
 </html>
